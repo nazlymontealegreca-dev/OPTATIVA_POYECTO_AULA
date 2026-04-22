@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventario FET</title>
+
+<link rel="stylesheet" href="defaul.css">
+<script src="https://kit.fontawesome.com/9d1a86738f.js"></script>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <aside class="menu-lateral">
+        <h2>Sistema de Gestión</h2>
+        <p>Deportes</p>
+<ul>
+    <li>
+        <a href="administrador.html">
+            <i class="fa-solid fa-house"></i> Inicio
+        </a>
+    </li>
+
+    <li class="activo">
+        <a href="index.html">
+            <i class="fa-solid fa-box"></i> Inventario
+        </a>
+    </li>
+
+    <li>
+        <a href="usuario.html">
+            <i class="fa-solid fa-users"></i> Usuarios
+        </a>
+    </li>
+
+    <li>
+        <a href="reportes.html">
+            <i class="fa-solid fa-chart-bar"></i> Reportes
+        </a>
+    </li>
+
+    <li>
+        <a href="documentos.html">
+            <i class="fa-solid fa-file"></i> Documentos
+        </a>
+    </li>
+
+    <li>
+        <a href="configuracion.html">
+            <i class="fa-solid fa-gear"></i> Configuración
+        </a>
+    </li>
+</ul>
+    </aside>
+
+    <main class="contenido">
+
+        <div class="header">
+            <div>
+                <h1>Gestión de Inventario</h1>
+                <p>Administra y controla todos los equipos deportivos</p>
+            </div>
+
+            <button class="btn-agregar">+ Agregar Artículo</button>
+        </div>
+
+        <div class="barra">
+            <input type="text" placeholder="Buscar artículos...">
+
+            <select>
+                <option>Todos los Estados</option>
+                <option>Disponible</option>
+                <option>Prestado</option>
+                <option>Mantenimiento</option>
+            </select>
+
+            <select>
+                <option>Todas las Categorías</option>
+                <option>Pelota</option>
+                <option>Raqueta</option>
+                <option>Uniforme</option>
+            </select>
+        </div>
+
+        <!-- CARDS (datos) -->
+        <div class="cards">
+            <div class="card">
+                <p>Total Artículos</p>
+                <h2>5</h2>
+            </div>
+
+            <div class="card">
+                <p>Disponibles</p>
+                <h2 class="verde">2</h2>
+            </div>
+
+            <div class="card">
+                <p>Prestados</p>
+                <h2 class="rojo">2</h2>
+            </div>
+
+            <div class="card">
+                <p>Mantenimiento</p>
+                <h2 class="amarillo">1</h2>
+            </div>
+        </div>
+
+        
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Estado</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                <tr>
+                    <td>Balón de Fútbol</td>
+                    <td>Pelota</td>
+                    <td><span class="estado disponible">Disponible</span></td>
+                    <td>10</td>
+                    <td>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Balón de Baloncesto</td>
+                    <td>Pelota</td>
+                    <td><span class="estado prestado">Prestado</span></td>
+                    <td>5</td>
+                    <td>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Balón de Voleibol</td>
+                    <td>Pelota</td>
+                    <td><span class="estado mantenimiento">Mantenimiento</span></td>
+                    <td>3</td>
+                    <td>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Raqueta de Tenis</td>
+                    <td>Raqueta</td>
+                    <td><span class="estado disponible">Disponible</span></td>
+                    <td>7</td>
+                    <td>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Uniforme Deportivo</td>
+                    <td>Uniforme</td>
+                    <td><span class="estado prestado">Prestado</span></td>
+                    <td>15</td>
+                    <td>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
