@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Préstamos FET</title>
+
+    <meta name="description" content="Gestión de préstamos de implementos deportivos de la Universidad FET">
+    <meta name="keywords" content="préstamos, inventario, deportes, Universidad FET">
+    <meta name="author" content="Nazly Michel - Montealegre">
+
+    <link rel="shortcut icon" href="img/icon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="defaul.css">
+    <script src="https://kit.fontawesome.com/9d1a86738f.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="prestamos-page">
+
+    <div class="prestamos-contenedor">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="prestamos-menu">
+
+            <div class="prestamos-logo">
+                <div class="prestamos-logo-icon">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </div>
+
+                <div>
+                    <h2>Deportes Hub</h2>
+                    <p>Sistema de Inventario</p>
+                </div>
+            </div>
+
+            <nav class="prestamos-nav">
+
+                <a href="administrador.html" class="prestamos-link">
+                    <i class="fa-solid fa-table-cells-large"></i>
+                    <span>Panel Principal</span>
+                </a>
+
+                <a href="index.html" class="prestamos-link">
+                    <i class="fa-solid fa-cube"></i>
+                    <span>Equipamiento</span>
+                </a>
+
+                <a href="prestamos.html" class="prestamos-link activo">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Préstamos</span>
+                </a>
+
+                <a href="usuario.html" class="prestamos-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Usuarios</span>
+                </a>
+
+                <a href="mantenimiento.html" class="prestamos-link">
+                    <i class="fa-solid fa-wrench"></i>
+                    <span>Mantenimiento</span>
+                </a>
+
+                <a href="analisis.html" class="prestamos-link">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Análisis</span>
+                </a>
+
+                <a href="configuracion.html" class="prestamos-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configuración</span>
+                </a>
+
+            </nav>
+
+            <div class="prestamos-user">
+                <div class="prestamos-user-avatar">JD</div>
+
+                <div>
+                    <h4>Juan Díaz</h4>
+                    <p>Administrador</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="prestamos-main">
+
+            <!-- CABECERA -->
+            <section class="prestamos-header">
+
+                <div>
+                    <h1>Gestión de Préstamos</h1>
+                    <p>Consulta y controla los préstamos de implementos deportivos</p>
+                </div>
+
+                <a href="administrador.html" class="btn-ir-nuevo-prestamo">
+                    <i class="fa-solid fa-plus"></i>
+                    Nuevo Préstamo
+                </a>
+
+            </section>
+
+            <!-- RESUMEN -->
+            <section class="prestamos-cards">
+
+                <article class="prestamo-card">
+                    <p>Total Préstamos</p>
+                    <h2>342</h2>
+                </article>
+
+                <article class="prestamo-card">
+                    <p>Activos</p>
+                    <h2 class="numero-morado">128</h2>
+                </article>
+
+                <article class="prestamo-card">
+                    <p>Devueltos</p>
+                    <h2 class="numero-verde">191</h2>
+                </article>
+
+                <article class="prestamo-card">
+                    <p>Vencidos</p>
+                    <h2 class="numero-rojo">23</h2>
+                </article>
+
+            </section>
+
+            <!-- FILTROS -->
+            <section class="prestamos-filtros">
+
+                <div class="prestamos-buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar por usuario o artículo...">
+                </div>
+
+                <button class="btn-filtro-prestamo">
+                    <i class="fa-solid fa-filter"></i>
+                    Todos los Estados
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <button class="btn-filtro-prestamo">
+                    <i class="fa-solid fa-calendar"></i>
+                    Fecha
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+            </section>
+
+            <!-- TABLA -->
+            <section class="prestamos-tabla-contenedor">
+
+                <table class="prestamos-tabla">
+
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Artículo</th>
+                            <th>Categoría</th>
+                            <th>Fecha Préstamo</th>
+                            <th>Fecha Devolución</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>María González</td>
+                            <td>Balón de Fútbol Adidas</td>
+                            <td>Pelota</td>
+                            <td>09/05/2026</td>
+                            <td>16/05/2026</td>
+                            <td><span class="estado-prestamo activo">Activo</span></td>
+                            <td>
+                                <div class="acciones-prestamo">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Carlos Ramírez</td>
+                            <td>Raqueta de Tenis Wilson Pro</td>
+                            <td>Raqueta</td>
+                            <td>01/05/2026</td>
+                            <td>08/05/2026</td>
+                            <td><span class="estado-prestamo vencido">Vencido</span></td>
+                            <td>
+                                <div class="acciones-prestamo">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Ana Torres</td>
+                            <td>Uniforme Azul Talla M</td>
+                            <td>Uniforme</td>
+                            <td>28/04/2026</td>
+                            <td>05/05/2026</td>
+                            <td><span class="estado-prestamo devuelto">Devuelto</span></td>
+                            <td>
+                                <div class="acciones-prestamo">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Luis Herrera</td>
+                            <td>Pelota de Voleibol Mikasa</td>
+                            <td>Pelota</td>
+                            <td>10/05/2026</td>
+                            <td>17/05/2026</td>
+                            <td><span class="estado-prestamo activo">Activo</span></td>
+                            <td>
+                                <div class="acciones-prestamo">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Laura Medina</td>
+                            <td>Guantes de Portero</td>
+                            <td>Equipo Protector</td>
+                            <td>30/04/2026</td>
+                            <td>07/05/2026</td>
+                            <td><span class="estado-prestamo vencido">Vencido</span></td>
+                            <td>
+                                <div class="acciones-prestamo">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Andrés Rojas</td>
+                            <td>Raqueta de Bádminton Yonex</td>
+                            <td>Raqueta</td>
+                            <td>03/05/2026</td>
+                            <td>10/05/2026</td>
+                            <td><span class="estado-prestamo devuelto">Devuelto</span></td>
+                            <td>
+                                <div class="acciones-prestamo">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!-- PAGINACIÓN -->
+            <section class="prestamos-paginacion">
+
+                <p>Mostrando <strong>1 a 6</strong> de <strong>342</strong> préstamos</p>
+
+                <div class="paginacion-prestamos-botones">
+                    <button>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="pagina-activa">1</button>
+
+                    <button>2</button>
+                    <button>3</button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

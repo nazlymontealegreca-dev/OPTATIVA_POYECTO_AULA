@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Login - Deportes Hub</title>
+
+    <meta name="description" content="Inicio de sesión y registro para el sistema de inventario y préstamos de implementos deportivos de la Universidad FET">
+    <meta name="keywords" content="login, registro, inventario, deportes, Universidad FET, préstamos">
+    <meta name="author" content="Nazly Michel - Montealegre">
+
+    <link rel="shortcut icon" href="img/icon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="defaul.css">
+    <script src="https://kit.fontawesome.com/9d1a86738f.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="login-page">
+
+    <main class="login-contenedor">
+
+        <!-- LADO IZQUIERDO -->
+        <section class="login-info">
+
+            <div class="login-logo">
+                <div class="login-logo-icon">
+                    <i class="fa-solid fa-volleyball"></i>
+                </div>
+
+                <div>
+                    <h1>Deportes Hub</h1>
+                    <p>Universidad FET</p>
+                </div>
+            </div>
+
+            <div class="login-texto">
+                <h2>Sistema de Inventario Deportivo</h2>
+                <p>
+                    Gestiona préstamos, usuarios e implementos deportivos de forma rápida,
+                    organizada y segura.
+                </p>
+            </div>
+
+            <div class="login-beneficios">
+
+                <div class="beneficio">
+                    <i class="fa-solid fa-cube"></i>
+                    <span>Control de inventario</span>
+                </div>
+
+                <div class="beneficio">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Gestión de préstamos</span>
+                </div>
+
+                <div class="beneficio">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Usuarios y administradores</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LADO DERECHO -->
+        <section class="login-card">
+
+            <div class="login-tabs">
+                <button class="tab-btn activo" id="btnLogin" type="button">Iniciar Sesión</button>
+                <button class="tab-btn" id="btnRegistro" type="button">Registrarse</button>
+            </div>
+
+            <!-- FORMULARIO LOGIN -->
+           <form class="formulario-login activo-form" id="formLogin" action="login.php" method="post">
+
+                <div class="titulo-formulario">
+                    <h2>Bienvenido</h2>
+                    <p>Ingresa tus datos para acceder al sistema</p>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="correoLogin">Correo electrónico</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input 
+                            type="email" 
+                            id="correoLogin"
+                            name="correoLogin"
+                            placeholder="ejemplo@fet.edu.co"
+                            maxlength="50"
+                            minlength="4"
+                            required>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="passwordLogin">Contraseña</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-lock"></i>
+                        <input 
+                            type="password" 
+                            id="passwordLogin"
+                            name="passwordLogin"
+                            placeholder="Ingresa tu contraseña"
+                            maxlength="25"
+                            minlength="8"
+                            required>
+                    </div>
+                </div>
+
+                <div class="opciones-login">
+                    <label>
+                        <input type="checkbox">
+                        Recordarme
+                    </label>
+
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button class="btn-login-principal" type="submit">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    Ingresar
+                </button>
+
+            </form>
+
+            <!-- FORMULARIO REGISTRO -->
+            <form class="formulario-login" id="formRegistro" action="registrar_usuario.php" method="post">
+
+                <div class="titulo-formulario">
+                    <h2>Crear cuenta</h2>
+                    <p>Registra un nuevo usuario para solicitar implementos deportivos</p>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="nombreRegistro">Nombre completo</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-user"></i>
+                        <input 
+                            type="text" 
+                            id="nombreRegistro"
+                            name="nombreRegistro"
+                            placeholder="Nombre y apellido"
+                            maxlength="60"
+                            minlength="4"
+                            required>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="correoRegistro">Correo electrónico</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input 
+                            type="email" 
+                            id="correoRegistro"
+                            name="correoRegistro"
+                            placeholder="ejemplo@fet.edu.co"
+                            maxlength="50"
+                            minlength="4"
+                            required>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="telefonoRegistro">Teléfono</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-phone"></i>
+                        <input 
+                            type="tel" 
+                            id="telefonoRegistro"
+                            name="telefonoRegistro"
+                            placeholder="+57 300 123 4567"
+                            maxlength="20"
+                            required>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="documentoRegistro">Documento</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-id-card"></i>
+                        <input 
+                            type="text" 
+                            id="documentoRegistro"
+                            name="documentoRegistro"
+                            placeholder="Número de documento"
+                            maxlength="30"
+                            required>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="passwordRegistro">Contraseña</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-lock"></i>
+                        <input 
+                            type="password" 
+                            id="passwordRegistro"
+                            name="passwordRegistro"
+                            placeholder="Mínimo 8 caracteres"
+                            maxlength="25"
+                            minlength="8"
+                            required>
+                    </div>
+                </div>
+
+                <button class="btn-login-principal" type="submit">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Registrar Usuario
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script>
+        const btnLogin = document.getElementById("btnLogin");
+        const btnRegistro = document.getElementById("btnRegistro");
+        const formLogin = document.getElementById("formLogin");
+        const formRegistro = document.getElementById("formRegistro");
+
+        btnLogin.addEventListener("click", () => {
+            btnLogin.classList.add("activo");
+            btnRegistro.classList.remove("activo");
+
+            formLogin.classList.add("activo-form");
+            formRegistro.classList.remove("activo-form");
+        });
+
+        btnRegistro.addEventListener("click", () => {
+            btnRegistro.classList.add("activo");
+            btnLogin.classList.remove("activo");
+
+            formRegistro.classList.add("activo-form");
+            formLogin.classList.remove("activo-form");
+        });
+    </script>
+
+</body>
+</html>
